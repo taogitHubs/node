@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name=""> + 
+    <input type="text" name=""> 
+    <button>=</button>
+    <input type="text" name="">
+
+<!-- 思考谁先引入 -->
+<!-- 回想Index.js中有没有依赖，cal -->
+    <script type="text/javascript" src="cal.js"></script>
+    <!-- 坏人来袭 -->
+    <script type="text/javascript">
+        cal = null;
+    </script>
+    <!-- 在这里会用到cal.add -->
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

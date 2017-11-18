@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>11_箭头函数注意事项</title>
+</head>
+<body>
+    <script type="text/javascript">
+        'use strict';
+        console.log(this); //this是window
+        let Person = (name,age)=>{ 
+            //箭头函数中本身没有this
+            this.name = name;
+            this.age = age;
+        }
+
+        // let p = new Person(); //报错，Person不是一个构造函数，不能作为构造函数
+
+
+        //箭头函数本身也没有arguments
+        // let testArguments = (n1,n2)=>{
+        //     console.log(arguments);
+        // }
+
+        // let testArguments = function(n1,n2){
+        //     console.log(arguments);
+        // }
+        // testArguments(1,2);
+        
+
+        //案例：非要箭头函数中有arguments
+        let parentFn = function(n1,n2){
+            // argument原封不动的，被箭头函数借去了
+            let subFn = (n3,n4)=>{ console.log(arguments); };
+            //调用箭头函数
+            subFn(5,10);
+        }
+
+
+        parentFn(1,2);
+
+    </script>
+</body>
+</html>

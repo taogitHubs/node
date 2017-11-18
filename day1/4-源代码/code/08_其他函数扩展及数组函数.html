@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>08_其他函数扩展及数组函数</title>
+</head>
+<body>
+    
+
+    <script type="text/javascript">
+        'use strict';
+        let heros = [{id:1,name:'梦奇'},{id:2,name:'娜可露露'},{id:3,name:'李白'}];
+
+        // 从数组中找到娜可露露
+        // let findHero = heros.find(function(ele,index,arr){
+        //     console.log(ele);
+        //     // console.log(index);
+        //     // console.log(arr);
+        //     console.log('=====================');
+            
+
+        //     //原数组在这里做参考，而且能修改
+        //     // arr[0].name = '哈哈'; 
+        //     // arr[0] = '哈哈'; 
+
+        //     //设置返回条件
+        //     return ele.name == '梦奇';  //如果为true,结束遍历并返回当前元素
+        // });
+        // // console.log(heros);
+        // console.log(findHero); //没有指定返回条件，没有找到，返回undefined
+
+
+        //根据条件查找元素索引
+        // let index = heros.findIndex(function(ele,index,arr){
+        //     return ele.name == '李白2';
+        // });
+
+        // console.log(index); //找到返回索引，找不到返回-1
+
+
+        console.log(Math.trunc(3.14159256));
+
+    </script>
+</body>
+</html>

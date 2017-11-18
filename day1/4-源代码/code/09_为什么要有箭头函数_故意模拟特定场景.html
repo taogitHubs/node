@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>为什么要有箭头函数_故意模拟特定场景</title>
+</head>
+<body>
+    
+    <button>哈哈</button>
+
+    <script type="text/javascript">
+        'use strict';
+        //特定一个对象
+        // var obj = {
+        //     name:'jack',
+        //     init:function(){
+        //         //this是谁？ obj
+        //         // console.log(this);
+        //         let self = this; //保存this指向
+
+        //         //在这个对象内，给任意按钮来上事件,回调函数中的this
+        //         document.querySelector('button').onclick = function(){
+        //             //this是button对象
+        //             // console.log(this);
+        //             //需求：
+        //             //这里需要使用obj这个对象，作为this
+        //             //方式1:获取obj内的this对象，在这里使用
+        //             console.log(self);
+        //         }
+        //     }
+        // }
+        // obj.init();
+
+        //方式2:使用箭头函数
+          var obj = {
+            name:'jack',
+            init:function(){
+                //this是谁？ obj
+                //在这个对象内，给任意按钮来上事件,回调函数中的this
+                document.querySelector('button').onclick = ()=>{
+                    //this是button对象
+                    //需求：
+                    //这里需要使用obj这个对象，作为this
+                    console.log(this);
+                }
+            }
+        }
+        // 箭头函数中，本身没有this对象，会向上级function绑定其this
+        obj.init();
+
+
+
+    </script>
+</body>
+</html>

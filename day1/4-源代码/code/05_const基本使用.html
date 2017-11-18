@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>05_const基本使用.html</title>
+</head>
+<body>
+    
+
+    <script type="text/javascript">
+        'use strict';
+        const PI = 3.1415;// 定义的常量，一般来讲，大写，多个单词_分隔
+        // const MY_PI = 3.14;
+        
+        //另一个哥们儿，不服，3.1415926535
+        // PI = 3.1415926535;  //赋值语句报错
+        // console.log(PI);
+
+        const PERSON = {  name:'jack'  };
+
+        // PERSON = 1;  被const关键字修饰的常量名,不能被二次赋值
+    
+        //将person.xxx属性修改
+        PERSON.name = 'rose';
+        console.log(PERSON);
+
+
+        //注意事项
+        // const num;  //语法错误
+        // //初始化 = 声明 + 赋值
+        // //过会儿想好了再赋值
+        // num = 1;
+
+
+
+
+    </script>
+</body>
+</html>

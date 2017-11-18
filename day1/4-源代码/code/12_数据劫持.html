@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>12_数据劫持</title>
+</head>
+<body>
+    <script type="text/javascript">
+        'use strict';
+        //Object.defineProperty(obj,propName,options)
+        let obj = {
+            name:'jack',age:18
+        }
+
+        //设置属性的存取监视
+        // Object.defineProperty(obj,'name',{
+        //     set:function(newV){
+        //         console.log(newV);// obj.name='123'获取这个123
+        //         console.log('set触发了');
+        //     },
+        //     get:function(){
+        //         console.log('get触发了');
+        //         return 'AAAAA';
+        //     }
+        // });
+        //可以继续设置18以上的,不能设置18以下的年龄
+        // let tmpAge = 18;
+        // Object.defineProperty(obj,'age',{
+        //     set:function(newV){
+
+        //         if(newV<18){
+        //             alert('年龄不合法');
+        //             return;
+        //         }
+
+        //         // console.log('set....');
+        //         tmpAge = newV;
+        //     },
+        //     get:function(){
+        //         // console.log('get....');
+        //         return tmpAge;
+        //     }
+        // });
+
+        //obj.age = 1; -> 触发obj.age属性的set函数
+
+        //暴力的问题即将产生
+        // Object.defineProperty(obj,'age',{
+        //     set:function(newV){ //1
+        //         console.log('set...........');
+        //         // obj.age = newV;// obj.age = 1;
+        //     },
+        //     get:function(){
+        //         return tmpAge;
+        //     }
+        // });
+
+
+
+    </script>
+</body>
+</html>

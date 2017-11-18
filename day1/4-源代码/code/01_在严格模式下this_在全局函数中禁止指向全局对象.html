@@ -1,0 +1,21 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>在严格模式下this 在全局函数中禁止指向全局对象</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // 'use strict'; //当前标签内的代码，都是在严格模式下运行的
+        function test(){
+            'use strict';
+            console.log(this);  //window 
+            //严格模式下是undefined
+        }
+        //调用函数
+        test();
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>07_str_function_ES6.html</title>
+</head>
+<body>
+    <div>
+        
+    </div>
+
+    <script type="text/javascript">
+        'use strict';
+        let str = 'helloworld';
+        //判断str是否以hello开头 -> true
+        // console.log(str.startsWith('hello'));
+        //判断str是否以world开头 -> false
+        // console.log(str.startsWith('world'));
+
+        //判断是否以world结尾 -> true
+        // console.log(str.endsWith('world'));
+        // //判断是否以hello结尾 -> FALSE
+        // console.log(str.endsWith('hello'));
+        // console.log(str.endsWith('worl')); //false，严格以参数结尾，少一个不行
+        
+
+        //判断是否包含
+        console.log(str.includes('llo')); //true
+        console.log(str.includes('helloworld'));//true
+        console.log(str.includes('lwo')); //存在于其中,但是顺序不一致，false
+        //相当于indexOf('llo') != -1 的结合判断
+        
+        //了解，重复字符串字数
+        //  字符串.repeat(参数num) -> 返回字符串
+        let love = 'i love you!';
+        let str2 = love.repeat(500);
+        document.querySelector('div').innerText = str2;
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>为什么要有let</title>
+</head>
+<body>
+    <ul>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+
+    <script type="text/javascript">
+        var lis = document.querySelectorAll('li');
+        // for (var i = 0; i < lis.length; i++) {
+        //     //4                     //i的值最终就是5,全局的i
+        //     lis[i].onclick = function(){
+        //         alert(i); //找i -> 就找到了5
+        //     }
+        // }
+
+        //方式1:函数的作用域保护起来
+        // for (var i = 0; i < lis.length; i++) {
+        //    (function(index){
+        //         //5个函数中各自有1个index，其不是var声明的
+        //         lis[index].onclick = function(){
+        //             alert(index);
+        //         }
+        //    })(i); //调用5次。每次传递i的值，给Index,而index在函数内
+        // }
+        
+        //方式2: 利用对象的属性，保存当时i的值
+        // for (var i = 0; i < lis.length; i++) {
+        //       lis[i].index = i;
+        //       lis[i].onclick = function(){
+        //           //点击的那个元素的index属性
+        //           alert(this.index);
+        //           console.log(this);
+        //       }
+        // }
+        
+        //方式3: 利用let，牛逼了！
+        for (let i = 0; i < lis.length; i++) {         
+                                //i代表在作用域中有多个值
+            lis[i].onclick = function(){
+                alert(i); //找i -> 就找到了5
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>04_let基本使用</title>
+</head>
+<body>
+    
+    
+    <script type="text/javascript">
+        'use strict';
+        // 建议使用ES6就开启严格模式
+        // 少部分关键字必须要在严格模式下使用
+        
+        let num = 1;
+
+        if(true){
+            // let num = 2;
+            // console.log(num);//2
+            //变量的查找机制是就近原则，当前作用域没有，则向上级作用域查找
+            
+
+            //查找机制可以向上借用
+            console.log(num);
+        }
+
+        console.log(num);//1
+
+
+        //能否在同一个作用域中声明同名变量 ，报错
+        // let num = 2;
+        // console.log(num);
+
+
+
+    </script>
+
+
+</body>
+</html>

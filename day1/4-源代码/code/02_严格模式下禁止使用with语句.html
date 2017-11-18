@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>02_严格模式下禁止使用with语句</title>
+</head>
+<body>
+    <script type="text/javascript">
+            // 'use strict';
+            //Strict mode code may not include a with statement
+
+            var person = {
+                name:'jack',age:18
+            }
+
+            //多次操作person的属性
+            // person.name = 'jack';
+            // person.age = 20;
+            
+            //with语句就是对于一个对象的简化多次操作的代码段
+            with(person){
+                name = 'jack';
+                age = 20;
+            }
+
+
+            console.log(person);
+    </script>
+</body>
+</html>

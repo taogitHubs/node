@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>10_箭头函数基本使用</title>
+</head>
+<body>
+    <script type="text/javascript">
+        'use strict';
+        // ()=>{}   箭头函数
+        // 没有参数
+        // let fn1 = function(){ return 1;  };
+        // let fn2 = ()=>{ return 2;  };
+        // console.log(fn1());
+        // console.log(fn2());
+
+
+        //多个参数
+        // let fn1 = function(n1,n2){ return n1 + n2;   };
+        // let fn2 = (n1,n2)=>{ return n1 + n2; };
+        // console.log(fn1(1,2)); //3
+        // console.log(fn2(2,3)); //5
+        
+        // 简化版
+        // 一个参数可以省略小括号
+        // let fn1 = function(n){ return n;  };
+        // let fn2 = n =>{ return n;};  // 参数 => 函数体
+
+        // console.log(fn1(5));
+        // console.log(fn2(8));
+
+        // 一行代码可以省略大括号
+        // let fn1 = function(n1,n2){
+        //     return n1 + n2;
+        // }
+        // let fn2 = (n1,n2)=>{
+        //     return n1 + n2;
+        // }
+        // let fn3 = (n1,n2) => n1 + n2;
+
+        // console.log(fn1(1,2));
+        // console.log(fn2(2,3));
+        // console.log(fn3(3,4));
+
+
+        //一个参数一行代码
+        //  箭头函数基本写法 ()=>{}
+        //  一个参数可以省略小括号
+        //  一行代码可以省略大括号
+        let fn1 = function(n){
+            return n;
+        }
+        let fn2 = n => n;
+        console.log(fn2(99));
+
+
+    </script>
+</body>
+</html>

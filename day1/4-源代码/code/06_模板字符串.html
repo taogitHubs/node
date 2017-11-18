@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   数据列表:
+    <div>
+
+    </div>
+
+    <pre></pre>
+    <button>点击获取数据</button>
+
+    <script type="text/javascript">
+        'use strict';
+        document.querySelector('button').onclick = function(){
+            // //模拟。实际此处从后台ajax获取
+            let data = [{city:'北京'},{city:'上海'},{city:'广州'},{city:'深圳'}];
+
+            // var tmpStr = '<ul>';
+            // //遍历加上li
+            // for (var i = data.length - 1; i >= 0; i--) {
+            //      tmpStr += '<li>' + data[i].city + '</li>';
+            // }
+            // tmpStr += '</ul>';
+            // //放入到DOM中
+            // document.querySelector('div').innerHTML = tmpStr;
+            
+            //使用模板字符串
+
+            let tmpStr = `
+                <ul>
+                    <li>${data[0].city}</li>
+                    <li>${data[1].city}</li>
+                    <li>${data[2].city}</li>
+                    <li>${data[3].city}</li>
+                </ul>
+            `;
+            //放入到DOM中
+            document.querySelector('div').innerHTML = tmpStr;  
+        };
+
+            //可以结合模板字符串在页面做原生字符画的输出
+             let temp = `
+                
+                      _            
+                 ____//]_________ 
+                (o _ |  -|  _  o| 
+                 -(_)------(_)--' 
+
+            `;
+
+
+            document.querySelector('pre').innerHTML =temp;
+
+
+
+    </script>
+</body>
+</html>
