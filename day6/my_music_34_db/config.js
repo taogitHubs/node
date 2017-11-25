@@ -1,0 +1,10 @@
+module.exports={
+    rootPath:__dirname,
+    db_connectionLimit:10,
+    db_host:'127.0.0.1',
+    db_user:'root',
+    db_password:'123.com',
+    db_database:'node_music',
+    web_host:'localhost',
+    web_port:9999
+}
